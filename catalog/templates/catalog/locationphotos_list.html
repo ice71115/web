@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Locationphoto List</h1>
+
+    {% if locationphotos_list %}
+    <ul>
+
+      {% for photo in locationphotos_list %}
+      <li>
+        <a href="{{ photo.get_absolute_url }}">{{ photo.title }}</a>
+      </li>
+      {% endfor %}
+
+    </ul>
+    {% else %}
+      <p>There are no books in the library.</p>
+    {% endif %}       
+{% endblock %}

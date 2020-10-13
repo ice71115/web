@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Title: {{ locationphotos.title }}</h1>
+
+  <p><strong>圖片:</strong> <img src="/media/{{ locationphotos.image }}" ></a></p> <!-- author detail link not yet defined -->
+
+  <p><strong>敘述:</strong> {{ locationphotos.depiction }}</p> 
+    
+  <div style="margin-left:20px;margin-top:20px">
+    <a href="delete/">delete</a>
+{% endblock %}
